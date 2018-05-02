@@ -229,9 +229,6 @@ export default class QRCodeScanner extends Component {
   render() {
     return (
       <View style={[styles.mainContainer, this.props.containerStyle]}>
-        <View style={[styles.infoView, this.props.topViewStyle]}>
-          {this._renderTopContent()}
-        </View>
         {this._renderCamera()}
         <View style={[styles.infoView, this.props.bottomViewStyle]}>
           {this._renderBottomContent()}
@@ -257,7 +254,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'transparent',
-    height: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
     width: Dimensions.get('window').width,
   },
 
